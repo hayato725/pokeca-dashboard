@@ -508,7 +508,7 @@ def style_profit_table(df: pd.DataFrame):
         "手残り(円)": "{:,.0f}",
         "真の利益(円)": "{:,.0f}",
         "ROI(%)": "{:+.2f}",
-    }).applymap(color_profit, subset=["真の利益(円)", "手残り(円)"]).applymap(color_roi, subset=["ROI(%)", "前回比(%)"])
+    }).map(color_profit, subset=["真の利益(円)", "手残り(円)"]).map(color_roi, subset=["ROI(%)", "前回比(%)"])
 
 
 def scan_market(fx_rate: float, mode: str) -> pd.DataFrame:
